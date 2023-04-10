@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace CRUD
+namespace Model
 {
 	public class mdlPessoas
 	{

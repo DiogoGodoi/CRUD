@@ -91,8 +91,6 @@
     <Compile Include="Cadastro.Designer.cs">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </Compile>
-    <Compile Include="ctrlPessoas.cs" />
-    <Compile Include="mdlPessoas.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <EmbeddedResource Include="Alterar.resx">
@@ -123,6 +121,16 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Control\Control.csproj">
+      <Project>{52f9f06a-f4f3-4642-b0d4-0eff8dd4300c}</Project>
+      <Name>Control</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Model\Model.csproj">
+      <Project>{195b6f81-214a-4ba2-92fb-8787c229e362}</Project>
+      <Name>Model</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
