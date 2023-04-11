@@ -186,6 +186,8 @@
             this.dtGrid.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dtGrid.Location = new System.Drawing.Point(361, 318);
             this.dtGrid.Name = "dtGrid";
+            this.dtGrid.ReadOnly = true;
+            this.dtGrid.RowHeadersWidth = 65;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
             dataGridViewCellStyle2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             dataGridViewCellStyle2.ForeColor = System.Drawing.Color.White;
