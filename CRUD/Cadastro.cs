@@ -103,7 +103,6 @@ namespace CRUD
                 this.WindowState = FormWindowState.Maximized;
             }
         }
-
         private void Excluir_Click(object sender, EventArgs e)
         {
             TextBox nome = txtNome;
