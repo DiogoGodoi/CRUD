@@ -79,12 +79,6 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Alterar.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Alterar.Designer.cs">
-      <DependentUpon>Alterar.cs</DependentUpon>
-    </Compile>
     <Compile Include="Cadastro.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -93,9 +87,6 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <EmbeddedResource Include="Alterar.resx">
-      <DependentUpon>Alterar.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Cadastro.resx">
       <DependentUpon>Cadastro.cs</DependentUpon>
     </EmbeddedResource>

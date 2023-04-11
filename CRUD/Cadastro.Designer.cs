@@ -45,17 +45,17 @@
             this.txtCod = new System.Windows.Forms.TextBox();
             this.btnPesquisa = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.iconClose = new FontAwesome.Sharp.IconPictureBox();
             this.iconMaximize = new FontAwesome.Sharp.IconPictureBox();
+            this.iconClose = new FontAwesome.Sharp.IconPictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pctLogo = new FontAwesome.Sharp.IconPictureBox();
             this.Titulo = new System.Windows.Forms.Label();
             this.grpCadastrar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconClose)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximize)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconClose)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).BeginInit();
             this.SuspendLayout();
             // 
@@ -130,7 +130,7 @@
             this.btnExibir.TabIndex = 9;
             this.btnExibir.Text = "Exibir";
             this.btnExibir.UseVisualStyleBackColor = false;
-            this.btnExibir.Click += new System.EventHandler(this.Excluir_Click);
+            this.btnExibir.Click += new System.EventHandler(this.Exibir_Click);
             // 
             // btnExluir
             // 
@@ -192,9 +192,10 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
             this.dtGrid.RowsDefaultCellStyle = dataGridViewCellStyle2;
-            this.dtGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.CellSelect;
+            this.dtGrid.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dtGrid.Size = new System.Drawing.Size(369, 163);
             this.dtGrid.TabIndex = 5;
+            this.dtGrid.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dtGrid_CellContentClick);
             // 
             // lblCodigo
             // 
@@ -242,6 +243,38 @@
             this.panel1.Size = new System.Drawing.Size(750, 33);
             this.panel1.TabIndex = 9;
             // 
+            // iconMaximize
+            // 
+            this.iconMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.iconMaximize.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconMaximize.IconChar = FontAwesome.Sharp.IconChar.Maximize;
+            this.iconMaximize.IconColor = System.Drawing.Color.White;
+            this.iconMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconMaximize.IconSize = 28;
+            this.iconMaximize.Location = new System.Drawing.Point(694, 0);
+            this.iconMaximize.Name = "iconMaximize";
+            this.iconMaximize.Size = new System.Drawing.Size(28, 33);
+            this.iconMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconMaximize.TabIndex = 2;
+            this.iconMaximize.TabStop = false;
+            this.iconMaximize.Click += new System.EventHandler(this.iconMaximize_Click);
+            // 
+            // iconClose
+            // 
+            this.iconClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
+            this.iconClose.Dock = System.Windows.Forms.DockStyle.Right;
+            this.iconClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
+            this.iconClose.IconColor = System.Drawing.Color.White;
+            this.iconClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconClose.IconSize = 28;
+            this.iconClose.Location = new System.Drawing.Point(722, 0);
+            this.iconClose.Name = "iconClose";
+            this.iconClose.Size = new System.Drawing.Size(28, 33);
+            this.iconClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.iconClose.TabIndex = 1;
+            this.iconClose.TabStop = false;
+            this.iconClose.Click += new System.EventHandler(this.iconClose_Click);
+            // 
             // pictureBox1
             // 
             this.pictureBox1.Dock = System.Windows.Forms.DockStyle.Left;
@@ -252,38 +285,6 @@
             this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
-            // 
-            // iconClose
-            // 
-            this.iconClose.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.iconClose.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconClose.IconChar = FontAwesome.Sharp.IconChar.Xmark;
-            this.iconClose.IconColor = System.Drawing.Color.White;
-            this.iconClose.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconClose.IconSize = 15;
-            this.iconClose.Location = new System.Drawing.Point(722, 0);
-            this.iconClose.Name = "iconClose";
-            this.iconClose.Size = new System.Drawing.Size(28, 33);
-            this.iconClose.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconClose.TabIndex = 1;
-            this.iconClose.TabStop = false;
-            this.iconClose.Click += new System.EventHandler(this.iconClose_Click);
-            // 
-            // iconMaximize
-            // 
-            this.iconMaximize.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(64)))));
-            this.iconMaximize.Dock = System.Windows.Forms.DockStyle.Right;
-            this.iconMaximize.IconChar = FontAwesome.Sharp.IconChar.Maximize;
-            this.iconMaximize.IconColor = System.Drawing.Color.White;
-            this.iconMaximize.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.iconMaximize.IconSize = 15;
-            this.iconMaximize.Location = new System.Drawing.Point(694, 0);
-            this.iconMaximize.Name = "iconMaximize";
-            this.iconMaximize.Size = new System.Drawing.Size(28, 33);
-            this.iconMaximize.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.iconMaximize.TabIndex = 2;
-            this.iconMaximize.TabStop = false;
-            this.iconMaximize.Click += new System.EventHandler(this.iconMaximize_Click);
             // 
             // pctLogo
             // 
@@ -336,9 +337,9 @@
             this.grpCadastrar.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dtGrid)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.iconClose)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.iconMaximize)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.iconClose)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pctLogo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();

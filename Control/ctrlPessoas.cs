@@ -56,7 +56,7 @@ namespace Control
             else
             {
                 dt = new DataTable();
-                dt.Columns.Add("ID", typeof(string));
+                dt.Columns.Add("Cod", typeof(string));
                 dt.Columns.Add("Nome", typeof(string));
                 dt.Columns.Add("Idade", typeof(string));
                 dt.Rows.Add("Sem dados", "Sem dados", "Sem dados");
@@ -88,9 +88,9 @@ namespace Control
                 return dtGrid.DataSource = dt;
             }
         }
-        public static Object Alterar(int id, mdlPessoas pessoas, DataGridView dtGrid)
+        public static Object Alterar(mdlPessoas pessoas, DataGridView dtGrid)
         {
-            var filtro = listPessoa.Where(i => i.getID() == id).ToList();
+            var filtro = listPessoa.Where(i => i.getID() == pessoas.getID()).ToList();
             if(filtro.Count > 0)
             {
                 dt = new DataTable();
@@ -109,13 +109,13 @@ namespace Control
                 return dtGrid.DataSource = listPessoa;
             }
         }
-		public static Object Remover(int id, DataGridView dtGrid)
+		public static Object Remover(mdlPessoas pessoas, DataGridView dtGrid)
 		{
-            listPessoa.RemoveAll(i => i.getID() == id);
+            listPessoa.RemoveAll(i => i.getID() == pessoas.getID());
             if (listPessoa.Count == 0)
             {
                 dt = new DataTable();
-                dt.Columns.Add("ID", typeof(string));
+                dt.Columns.Add("Cod", typeof(string));
                 dt.Columns.Add("Nome", typeof(string));
                 dt.Columns.Add("Idade", typeof(string));
                 dt.Rows.Add("Sem dados", "Sem dados", "Sem dados");
